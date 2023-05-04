@@ -7,6 +7,12 @@ import (
 )
 
 func ConfirmDeferOrder(){
+	var n = 100
+	defer fmt.Println("普通の関数", n)
+	defer func(){
+		fmt.Println("無名関数", n)
+	}()
+	n = 200
 	defer fmt.Println("6")
 	defer fmt.Println("5")
 	defer fmt.Println("4")
