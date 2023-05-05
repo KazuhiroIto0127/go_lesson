@@ -50,4 +50,5 @@ func main(){
 	}
 
 	fmt.Println("Decode JSON data:", data2)
+	fmt.Println(data2.Description)
 }
