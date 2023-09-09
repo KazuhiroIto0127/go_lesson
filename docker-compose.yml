@@ -10,4 +10,4 @@ services:
     container_name: go-lesson
     tty: true
     volumes:
-      - ./playground:/app
+      - ./:/app
