@@ -1,11 +1,12 @@
 # go_lesson
 
 goを学ぶためのもの
-go versionは1.20.3
+go versionは1.22
 
 ## 利用方法
 
-- docker起動
-  - docker compose up -d
-- 実行
-  - docker exec -it gotest go run helloWorld.go
+- VscodeのDevContainerで開きます。
+
+## 参考にしたものたち　（ありがとうございます）
+
+- https://github.com/bun913/go_devcontainer
