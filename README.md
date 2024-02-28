@@ -10,3 +10,4 @@ go versionは1.22
 ## 参考にしたものたち　（ありがとうございます）
 
 - https://github.com/bun913/go_devcontainer
+- https://github.com/allaboutapps/go-starter
