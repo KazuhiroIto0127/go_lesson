@@ -1,4 +1,5 @@
 {
+  "name": "go_lesson",
   "dockerComposeFile": "compose.yaml",
   "service": "golang",
   "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
@@ -8,16 +9,29 @@
         "golang.go"
       ],
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
-        "go.toolsManagement.checkForUpdates": "off",
-        "go.gopath": "/go",
-        "go.gocodeAutoBuild": true,
-        "go.formatTool": "gofmt",
         "go.useLanguageServer": true,
-        "editor.formatOnSave": false,
         "[go]": {
-          "editor.formatOnSave": true
-        }
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": true
+					},
+					// Optional: Disable snippets, as they conflict with completion ranking.
+					"editor.snippetSuggestions": "none"
+				},
+				"[go.mod]": {
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": true
+					}
+				},
+        "gopls": {
+					// Add parameter placeholders when completing a function.
+					"usePlaceholders": true,
+					// If true, enable additional analyses with staticcheck.
+					// Warning: This will significantly increase memory usage.
+					// DISABLED, done via
+					"staticcheck": false
+				}
       }
     }
   }
